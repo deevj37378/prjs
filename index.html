@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tip">
+        <p>Enter bill amount</p>
+        <input type="text" name="bill" id="bill-input" placeholder="Enter bill amount" />
+        <p>Add a tip!</p>
+        <button id="tip1">10% tip</button>
+        <button id="tip2">15% tip</button>
+        <button id="tip3">20% tip</button>
+        <p id="show"></p>
+    </div>
+    <div class="pass-gen">
+        <button id="genpass">Generate Password!</button>
+        <p id="show-pass"></p>
+    </div>
+    <div id="quiz">
+        <button id="show-q">Show Question</button>
+        <p id="q"></p>
+        <div id="options-container"></div>
+        <button id="next-q">Next question</button>
+        <p id="score"></p>
+    </div>
+    <div id="to-do">
+        <input type="text" name="item" id="addItem" placeholder="Enter item name" />
+        <button id="addi">Add item</button>
+        
+        <ul id="list"></ul>
+    </div>
+    <div id="timer">
+        <button id="time">Start timer</button>
+        <p id="days"></p>
+<p id="hours"></p>
+<p id="minutes"></p>
+<p id="seconds"></p>
+    </div>
+    <div id="bmi">
+        <input type="text" name="weight" id="weightInput" placeholder="Enter your weight(in kg)" />
+        <input type="text" name="height" id="heightInput" placeholder="Enter your height(in m)" />
+        <button id="gen-bmi">Generate BMI</button>
+        <p id="bmi-result"></p>
+    </div>
+    <input type="text" id="pokemonName" placeholder="Enter pokemon name"/>
+    <button onclick="fetchData()">Get pokemon</button>
+    <img src="" alt="Pokemon" id="pokemonSprite" style="display: none;">
+    <div id="jokes">
+        <button id="get-joke">Fetch joke</button>
+        <p id="joke"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

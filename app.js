@@ -267,3 +267,41 @@ jokeBtn.addEventListener("click", async() => {
     document.getElementById("joke").innerText = data.setup + " " + data.punchline;
 })
 
+
+//last 10 questions
+//question1
+
+const balance = document.querySelector("#balance");
+const itemName = document.querySelector("#itemName");
+const itemPrice = document.querySelector("#itemPrice");
+const bal = document.querySelector("#bal"); //balance button
+
+let runningTotal = 0;
+
+bal.addEventListener("click", () => {
+    let name = document.getElementById("itemName").value;
+    let itemList = document.createElement("p");
+    itemList.innerText = name;
+    balance.appendChild(itemList);
+    let price = parseFloat(document.getElementById("itemPrice").value);
+    let itemPriceList = document.createElement("p");
+    itemPriceList.innerText = price;
+    balance.appendChild(itemPriceList);
+    let totalBalance = document.createElement("p");
+    totalBalance.innerText = `The balance is ${runningTotal += price}`;
+    balance.appendChild(totalBalance);
+itemName.value = "";
+    itemPrice.value = "";
+    let deleteBtnn = document.createElement("button");
+    deleteBtnn.innerText = "Delete item";
+    deleteBtnn.addEventListener("click", () => {
+        itemList.remove();
+        itemPriceList.remove();
+        totalBalance.innerText = `The new balance is ${runningTotal -= price}`;
+        deleteBtnn.classList.add("hide");
+        deleteBtnn.disabled = true;
+    })
+    balance.appendChild(deleteBtnn);
+})
+
+
